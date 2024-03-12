@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Text Saver</title>
 </head>
 <body>
-    <p>This is a test</p>
+    <h1>Text Saver</h1>
+    
+    <label for="textInput">Enter Text:</label>
+    <input type="text" id="textInput" placeholder="Type something...">
+
+    <button onclick="saveText()">Save</button>
+
+    <p id="displayText"></p>
+
+    <script>
+        function saveText() {
+            var inputText = document.getElementById("textInput").value;
+            document.getElementById("displayText").textContent = inputText;
+        }
+    </script>
 </body>
 </html>
